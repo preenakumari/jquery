@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f8fbfee668.js" crossorigin="anonymous"></script>
+    <style>
+        #faq dt{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- <marquee  ></marquee> -->
+    <dl id="faq">
+        <dt data-acc-id="#desc1">What is html? </dt>
+        <dd id="desc1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro aut commodi laborum minima. Asperiores aliquam vel dolorem provident porro.</dd>
+        <dt data-acc-id="#desc2">What is css?</dt>
+        <dd id="desc2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro aut commodi laborum minima. Asperiores aliquam vel dolorem provident porro.</dd>
+        <dt data-acc-id="#desc3">What is js?</dt>
+        <dd id="desc3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro aut commodi laborum minima. Asperiores aliquam vel dolorem provident porro.</dd>
+    </dl>
+</body>
+<script src="./jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(()=>{
+        $("#root").append("<h2>Hello Prena and Kashish</h2>")
+        $("#root").append("<marquee direction='right'>Welcome to my website<i class='fa-solid fa-arrow-right-long'></i></marquee>")
+        $('#faq dd').hide()
+        $("#faq dt").click((e)=>{
+          var ddId=$(e.target).attr("data-acc-id")
+          $(ddId).slideToggle()
+        })
+    })
+</script>
+</html>
